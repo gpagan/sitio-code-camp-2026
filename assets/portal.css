@@ -74,6 +74,27 @@ h3 { font-size: 19px; }
 .boton-whatsapp { background: #25D366; color: #0B2E1A; width: 100%; margin-top: 20px; }
 .boton-chico { padding: 8px 14px; font-size: 14px; border-radius: 10px; }
 
+/* ---------- Banner de registro ---------- */
+.banner-registro {
+  background: var(--lima);
+  color: var(--noche);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 15px;
+}
+.banner-registro p { margin: 0; }
+
+/* ---------- Registro final ---------- */
+.registro-final { background: var(--noche); color: #fff; }
+.registro-final-caja { text-align: center; max-width: 620px; }
+.registro-final-caja p { color: var(--gris-claro); font-size: 18px; margin: 10px 0 22px; }
+.registro-final-caja .boton { font-size: 18px; padding: 16px 28px; }
+
 /* ---------- Navegación ---------- */
 .nav {
   position: sticky;
