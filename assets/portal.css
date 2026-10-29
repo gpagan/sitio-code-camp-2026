@@ -71,8 +71,31 @@ h3 { font-size: 19px; }
 .boton-borde { border-color: var(--gris-claro); color: #fff; }
 .boton-oscuro { background: var(--noche); color: var(--hueso); }
 .boton-borde-oscuro { border-color: var(--noche); color: var(--noche); }
-.boton-whatsapp { background: #25D366; color: #0B2E1A; width: 100%; margin-top: 20px; }
+.boton-whatsapp { background: #25D366; color: #0B2E1A; }
 .boton-chico { padding: 8px 14px; font-size: 14px; border-radius: 10px; }
+.botones-centradas { justify-content: center; }
+.botones-contacto { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+.botones-contacto .boton { width: 100%; }
+
+/* ---------- WhatsApp flotante ---------- */
+.whatsapp-flotante {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 50;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+.whatsapp-flotante:hover { transform: scale(1.06); }
 
 /* ---------- Banner de registro ---------- */
 .banner-registro {
@@ -285,7 +308,9 @@ h3 { font-size: 19px; }
 @media (max-width: 600px) {
   body { font-size: 16px; }
   .seccion, .seccion.contenedor { padding: 52px 0; }
-  .nav-cta { display: none; }
+  .marca { font-size: 15px; }
+  .nav-cta { padding: 7px 12px; font-size: 13px; }
+  .banner-registro { font-size: 13px; padding: 8px 12px; }
   .portada { padding: 40px 0 64px; }
   .portada-collage { display: none; }
   .misiones, .aprendizajes, .precios { grid-template-columns: 1fr; }
