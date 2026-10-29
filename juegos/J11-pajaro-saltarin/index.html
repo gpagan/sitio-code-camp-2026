@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pájaro saltarín</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pájaro saltarín</h1>
+    <p class="instrucciones">Haz aletear al pájaro con la <kbd>barra espaciadora</kbd>, la flecha <kbd>↑</kbd> o un clic. Pasa entre los tubos sin chocar.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Puntos</span><span id="puntos" class="numero">0</span></div>
+    <div><span class="etiqueta">Récord</span><span id="record" class="numero">0</span></div>
+  </div>
+
+  <canvas id="lienzo" width="480" height="600"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

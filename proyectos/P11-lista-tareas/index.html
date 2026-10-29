@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- ===== P11 · Lista de tareas (reto de la semana 3) =====
+     Crear y borrar elementos desde JavaScript y guardar datos en el navegador. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi lista de tareas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Mi lista de tareas</h1>
+
+    <form id="formulario" class="formulario">
+      <label for="nueva-tarea" class="oculto">Nueva tarea</label>
+      <input type="text" id="nueva-tarea" placeholder="¿Qué tienes que hacer?" maxlength="80" autocomplete="off">
+      <button type="submit">Agregar</button>
+    </form>
+
+    <div class="filtros">
+      <button class="filtro activo" data-filtro="todas">Todas</button>
+      <button class="filtro" data-filtro="pendientes">Pendientes</button>
+      <button class="filtro" data-filtro="hechas">Hechas</button>
+    </div>
+
+    <ul id="lista" class="lista"></ul>
+
+    <div class="pie">
+      <p id="contador"></p>
+      <button id="boton-limpiar" class="secundario">Borrar las hechas</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- ===== P3 · Galería de fotos (clase 3) =====
+     Flexbox para el encabezado, grid para la cuadrícula de fotos.
+     PERSONALIZA: cambia las fotos de la carpeta "fotos" por las tuyas
+     (paisajes, mascotas, comida... nunca fotos de otras personas sin permiso). -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi galería</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Encabezado con FLEXBOX: título a la izquierda, contador a la derecha -->
+  <header class="encabezado">
+    <h1>Mi galería de Honduras</h1>
+    <p class="contador">6 fotos</p>
+  </header>
+
+  <!-- La cuadrícula con GRID -->
+  <main class="galeria">
+    <figure class="foto">
+      <img src="fotos/playa.svg" alt="Playa con una palmera">
+      <figcaption>Playa</figcaption>
+    </figure>
+    <figure class="foto grande">
+      <img src="fotos/volcan.svg" alt="Volcán con humo">
+      <figcaption>Volcán</figcaption>
+    </figure>
+    <figure class="foto">
+      <img src="fotos/ciudad.svg" alt="Ciudad de noche">
+      <figcaption>Ciudad de noche</figcaption>
+    </figure>
+    <figure class="foto">
+      <img src="fotos/bosque.svg" alt="Bosque de pinos">
+      <figcaption>Bosque</figcaption>
+    </figure>
+    <figure class="foto">
+      <img src="fotos/atardecer.svg" alt="Atardecer sobre el mar">
+      <figcaption>Atardecer</figcaption>
+    </figure>
+    <figure class="foto ancha">
+      <img src="fotos/montana.svg" alt="Montañas con nieve">
+      <figcaption>Montañas</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    <p>Pasa el mouse sobre cada foto.</p>
+  </footer>
+
+</body>
+</html>

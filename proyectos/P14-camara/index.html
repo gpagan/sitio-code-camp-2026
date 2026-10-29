@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- ===== P14 · La cámara en mi página (clase 9) =====
+     IMPORTANTE: abre esta página con Live Server
+     (clic derecho en index.html > Open with Live Server).
+     La cámara solo funciona en tu computadora; nada se envía a internet. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cámara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>La cámara en mi página</h1>
+
+  <main class="panel">
+    <!-- video: aquí se ve lo que capta la cámara -->
+    <div class="pantalla">
+      <video id="video" autoplay playsinline muted></video>
+      <p id="aviso" class="aviso">La cámara está apagada</p>
+    </div>
+
+    <div class="botones">
+      <button id="boton-camara">Encender cámara</button>
+      <button id="boton-foto" disabled>📸 Tomar foto</button>
+      <label class="interruptor"><input type="checkbox" id="espejo" checked> Efecto espejo</label>
+    </div>
+
+    <div class="filtros">
+      <span>Filtro:</span>
+      <button class="filtro activo" data-filtro="none">Normal</button>
+      <button class="filtro" data-filtro="grayscale(1)">Blanco y negro</button>
+      <button class="filtro" data-filtro="sepia(1)">Sepia</button>
+      <button class="filtro" data-filtro="invert(1)">Negativo</button>
+      <button class="filtro" data-filtro="saturate(3)">Colores vivos</button>
+    </div>
+
+    <h2>Mis fotos</h2>
+    <p class="nota">Las fotos se quedan en esta página. Para guardar una, haz clic en "Descargar".</p>
+    <div id="fotos" class="fotos"></div>
+  </main>
+
+  <!-- canvas oculto: lo usamos para "congelar" un cuadro del video -->
+  <canvas id="lienzo" hidden></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

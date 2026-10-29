@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rompe ladrillos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Rompe ladrillos</h1>
+    <p class="instrucciones">Mueve la barra con las flechas <kbd>←</kbd> <kbd>→</kbd> o con el mouse. Presiona <kbd>Espacio</kbd> o haz clic para lanzar la pelota. Rompe todos los ladrillos.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Puntos</span><span id="puntos" class="numero">0</span></div>
+    <div><span class="etiqueta">Vidas</span><span id="vidas" class="numero">3</span></div>
+  </div>
+
+  <canvas id="lienzo" width="800" height="560"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 16px;
+  background-color: #0F1B2D;
+  color: #F6F4EE;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  text-align: center;
+}
+
+h1 { color: #C8F25A; }
+h2 { margin-top: 0; }
+
+.fila {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta {
+  background-color: #18283F;
+  border-radius: 20px;
+  padding: 24px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+button {
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  background-color: #C8F25A;
+  color: #0F1B2D;
+  cursor: pointer;
+}
+
+button:hover { background-color: #DDF98E; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.grande { font-size: 24px; font-weight: 700; margin: 0; min-height: 1.3em; }
+.historial { color: #A9B6C8; min-height: 1.2em; margin: 0; }
+
+/* ===== El dado: una cuadrícula de 3 × 3 ===== */
+.dado {
+  width: 130px;
+  height: 130px;
+  background-color: #F6F4EE;
+  border-radius: 22px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  box-shadow: 0 8px 0 #C9C1BB;
+}
+
+.punto {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.punto.encendido { background-color: #0F1B2D; }
+
+/* ===== Animación con CSS: @keyframes describe los pasos ===== */
+@keyframes rodar {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(0.8); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* JavaScript le pone la clase "rodando" al dado mientras gira */
+.dado.rodando {
+  animation: rodar 0.6s ease-in-out;
+}
+
+/* ===== La ruleta ===== */
+label { align-self: flex-start; color: #C9D3E0; }
+
+textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #3A5274;
+  resize: vertical;
+}
+
+.ruleta {
+  margin: 0;
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #0F1B2D;
+  border: 3px dashed #3A5274;
+  border-radius: 16px;
+}
+
+.ruleta.elegido {
+  border: 3px solid #C8F25A;
+  color: #C8F25A;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- ===== P13 · Mi primera IA, sin código (clase 7) =====
+     Esta página es la guía y la bitácora del entrenamiento.
+     El modelo se entrena en Teachable Machine (Google), no aquí. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primera IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p class="etiqueta">Proyecto P13 · Clase 7</p>
+    <h1>Mi primera IA, sin código</h1>
+    <p class="intro">Vas a entrenar un modelo que reconoce tu mano haciendo piedra, papel o tijera. Es el mismo modelo que usarás en el juego de cierre.</p>
+    <a class="boton" href="https://teachablemachine.withgoogle.com/" target="_blank">Abrir Teachable Machine</a>
+  </header>
+
+  <main>
+    <p class="progreso">Pasos completados: <b id="completados">0</b> de <span id="total-pasos">0</span></p>
+
+    <ol class="pasos">
+      <li class="paso">
+        <label><input type="checkbox" class="check"> <b>Crea un proyecto de imagen.</b></label>
+        <p>En Teachable Machine elige <i>Image Project</i> (proyecto de imagen) y luego <i>Standard image model</i> (modelo de imagen estándar).</p>
+      </li>
+      <li class="paso">
+        <label><input type="checkbox" class="check"> <b>Crea 4 clases con estos nombres exactos.</b></label>
+        <p>El juego busca estos nombres, así que escríbelos igual:</p>
+        <div class="clases">
+          <span>Piedra</span><span>Papel</span><span>Tijera</span><span>Nada</span>
+        </div>
+        <p>La clase <b>Nada</b> es para cuando no hay mano frente a la cámara. Sin ella, la IA siempre intentará adivinar algo.</p>
+      </li>
+      <li class="paso">
+        <label><input type="checkbox" class="check"> <b>Graba muestras con la cámara.</b></label>
+        <p>En cada clase usa <i>Webcam</i> y mantén presionado el botón de grabar. Graba <b>al menos 200 fotos por clase</b>.</p>
+        <ul>
+          <li>Mueve la mano: más cerca, más lejos, de lado, girada.</li>
+          <li>Graba solo tu mano, no tu cara.</li>
+          <li>Para <b>Nada</b>, graba el fondo vacío.</li>
+          <li>¿Sin cámara? Usa <i>Upload</i> (subir) con fotos de manos desde tu computadora.</li>
+        </ul>
+      </li>
+      <li class="paso">
+        <label><input type="checkbox" class="check"> <b>Entrena el modelo.</b></label>
+        <p>Presiona <i>Train Model</i> (entrenar) y espera. No cierres la pestaña mientras entrena.</p>
+      </li>
+      <li class="paso">
+        <label><input type="checkbox" class="check"> <b>Pruébalo y mejóralo.</b></label>
+        <p>En <i>Preview</i> (vista previa) haz cada gesto. Donde la IA se equivoque, graba más muestras de ese gesto y vuelve a entrenar. Anota tus pruebas en la bitácora de abajo.</p>
+      </li>
+      <li class="paso">
+        <label><input type="checkbox" class="check"> <b>Descarga tu modelo.</b></label>
+        <p>Presiona <i>Export Model</i> (exportar modelo), elige la pestaña <i>Tensorflow.js</i>, marca <i>Download</i> (descargar) y descarga el modelo. Los nombres de los botones pueden variar un poco.</p>
+        <p>Descomprime el archivo y guarda sus 3 archivos en una carpeta llamada <code>mi_modelo</code>:</p>
+        <pre>mi_modelo/
+  model.json
+  metadata.json
+  weights.bin</pre>
+        <p>El modelo se queda en tu computadora: no se publica en internet.</p>
+      </li>
+      <li class="paso">
+        <label><input type="checkbox" class="check"> <b>Guarda también el proyecto.</b></label>
+        <p>Usa el menú de Teachable Machine para guardar el proyecto en tu computadora. Así podrás seguir entrenándolo después.</p>
+      </li>
+    </ol>
+
+    <section class="bitacora">
+      <h2>Bitácora de entrenamiento</h2>
+      <p>Anota cada prueba. Así ves qué cambio mejoró tu IA.</p>
+      <div class="tabla">
+        <table>
+          <thead>
+            <tr><th>Prueba</th><th>Fotos por clase</th><th>¿Qué cambié?</th><th>¿Qué gesto confunde?</th></tr>
+          </thead>
+          <tbody id="filas-bitacora"></tbody>
+        </table>
+      </div>
+      <button id="boton-fila" class="secundario">Agregar prueba</button>
+    </section>
+
+    <section class="pensar">
+      <h2>Para pensar</h2>
+      <ul>
+        <li>Si solo grabaste con mucha luz, ¿qué pasa de noche? Eso es un <b>sesgo</b>: la IA aprende solo de lo que le mostraste.</li>
+        <li>Si un compañero prueba tu modelo con su mano, ¿funciona igual? ¿Por qué?</li>
+        <li>¿Qué pasaría si entrenaras con fotos de otras personas sin su permiso?</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

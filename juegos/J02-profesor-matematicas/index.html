@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profesor de matemáticas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Profesor de matemáticas</h1>
+    <p class="instrucciones">Escribe la respuesta y presiona <kbd>Enter</kbd> antes de que se acabe el reloj. Cada 5 aciertos subes de nivel. Tienes 3 vidas.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Puntos</span><span id="puntos" class="numero">0</span></div>
+    <div><span class="etiqueta">Nivel</span><span id="nivel" class="numero">1</span></div>
+    <div><span class="etiqueta">Vidas</span><span id="vidas" class="numero">❤️❤️❤️</span></div>
+  </div>
+
+  <main class="pizarra">
+    <p id="profesor" class="profesor">👨‍🏫 ¡Hola! ¿Listo para practicar?</p>
+    <p id="nombre-nivel" class="nombre-nivel"></p>
+    <p id="ejercicio" class="ejercicio">? + ? = ?</p>
+
+    <div class="barra-tiempo"><div id="tiempo-restante" class="tiempo-restante"></div></div>
+
+    <div class="respuesta">
+      <input type="number" id="respuesta" placeholder="Tu respuesta" disabled>
+      <button id="boton-responder" disabled>Responder</button>
+    </div>
+
+    <p id="mensaje" class="mensaje"></p>
+    <button id="boton-iniciar">Empezar</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

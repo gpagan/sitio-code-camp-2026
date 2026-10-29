@@ -1,0 +1,107 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 32px 16px 48px;
+  background-color: #F6F4EE;
+  color: #0F1B2D;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header, main { max-width: 760px; margin: 0 auto; }
+
+header {
+  background-color: #0F1B2D;
+  color: #F6F4EE;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.etiqueta {
+  margin: 0;
+  color: #C8F25A;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+h1 { margin: 6px 0 8px; font-size: 34px; }
+.intro { color: #C9D3E0; font-size: 18px; }
+
+.boton, button {
+  display: inline-block;
+  font: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  background-color: #C8F25A;
+  color: #0F1B2D;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover, button:hover { background-color: #DDF98E; }
+button.secundario { background-color: #E4E0D6; }
+button.secundario:hover { background-color: #D6D1C4; }
+
+.progreso { font-size: 18px; }
+
+.pasos { padding-left: 24px; }
+
+.paso {
+  background-color: #FFFFFF;
+  border: 2px solid #E4E0D6;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+
+.paso.hecho { border-color: #C8F25A; background-color: #F7FCE9; }
+
+.paso label { cursor: pointer; font-size: 18px; }
+.check { width: 20px; height: 20px; accent-color: #3F6B0A; vertical-align: middle; }
+
+.clases { display: flex; gap: 8px; flex-wrap: wrap; }
+.clases span {
+  background-color: #0F1B2D;
+  color: #C8F25A;
+  font-family: "Consolas", "Courier New", monospace;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
+code, pre {
+  font-family: "Consolas", "Courier New", monospace;
+  background-color: #0F1B2D;
+  color: #F6F4EE;
+  border-radius: 8px;
+}
+
+code { padding: 2px 6px; }
+pre { padding: 12px 16px; }
+
+.bitacora, .pensar {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.tabla { overflow-x: auto; }
+
+table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
+th, td { border-bottom: 1px solid #E4E0D6; padding: 6px; text-align: left; }
+th { font-size: 14px; color: #3E4A5C; }
+
+td input {
+  width: 100%;
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid #C9D3E0;
+  border-radius: 8px;
+}

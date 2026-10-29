@@ -1,0 +1,126 @@
+/* ===== P2 · Ficha de mi videojuego favorito =====
+   Una regla de CSS tiene tres partes:
+   selector { propiedad: valor; }
+
+   PERSONALIZA: tu paleta de colores
+   Fondo de la página:  #0F1B2D  (azul noche)
+   Tarjeta:             #F6F4EE  (blanco hueso)
+   Acento:              #C8F25A  (verde lima)
+   Texto:               #0F1B2D                                  */
+
+/* 1. Toda la página */
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px 16px;
+  background-color: #0F1B2D;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #0F1B2D;
+  display: flex;               /* centra la tarjeta */
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. La tarjeta: aquí se ve el MODELO DE CAJA
+      contenido → padding (relleno) → border (borde) → margin (margen) */
+.ficha {
+  width: 420px;
+  max-width: 100%;
+  background-color: #F6F4EE;
+  border: 4px solid #C8F25A;       /* borde de 4 píxeles */
+  border-radius: 24px;             /* esquinas redondeadas */
+  overflow: hidden;                /* recorta la imagen en las esquinas */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);  /* sombra: x  y  difuminado  color */
+}
+
+/* 3. La imagen ocupa todo el ancho de la tarjeta */
+.portada {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* 4. El relleno (padding) separa el texto del borde */
+.contenido {
+  padding: 24px 28px 32px;
+}
+
+.etiqueta {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;       /* convierte a MAYÚSCULAS */
+  color: #3F6B0A;
+}
+
+h1 {
+  margin: 4px 0 16px;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+h2 {
+  margin: 24px 0 8px;
+  font-size: 18px;
+  border-bottom: 3px solid #C8F25A;
+  padding-bottom: 4px;
+}
+
+/* 5. Las "pastillas": una caja pequeña con fondo y bordes redondos */
+.datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dato {
+  background-color: #0F1B2D;
+  color: #F6F4EE;
+  font-size: 13px;
+  padding: 4px 12px;               /* arriba-abajo  izquierda-derecha */
+  border-radius: 999px;            /* un número grande = forma de pastilla */
+}
+
+.descripcion {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3E4A5C;
+}
+
+.estrellas {
+  margin: 0;
+  font-size: 28px;
+  color: #E0A100;
+  letter-spacing: 4px;
+}
+
+.nota {
+  font-size: 15px;
+  letter-spacing: 0;
+  color: #3E4A5C;
+}
+
+.razones {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* 6. Un enlace con forma de botón */
+.boton {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 22px;
+  background-color: #C8F25A;
+  color: #0F1B2D;
+  font-weight: 700;
+  text-decoration: none;           /* quita el subrayado */
+  border-radius: 12px;
+}
+
+/* :hover = cuando el mouse pasa por encima */
+.boton:hover {
+  background-color: #0F1B2D;
+  color: #C8F25A;
+}

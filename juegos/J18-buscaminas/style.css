@@ -1,0 +1,74 @@
+/* ===== Estilos base del Code Camp (PERSONALIZA los colores) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 16px 48px;
+  background: #0F1B2D;
+  color: #F6F4EE;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header { text-align: center; max-width: 760px; }
+h1 { margin: 8px 0; font-size: 2.2rem; color: #C8F25A; }
+.instrucciones { margin: 0 0 20px; color: #C9D3E0; font-size: 1.05rem; line-height: 1.5; }
+
+.marcador { display: flex; gap: 12px; align-items: center; justify-content: center; margin-bottom: 20px; }
+.marcador div { background: #18283F; border-radius: 12px; padding: 10px 18px; text-align: center; min-width: 110px; }
+.etiqueta { display: block; font-size: 0.8rem; color: #A9B6C8; text-transform: uppercase; letter-spacing: 1px; }
+.numero { display: block; font-size: 2rem; font-weight: 700; }
+.mensaje { min-height: 1.6em; font-size: 1.2rem; font-weight: 700; text-align: center; }
+.mensaje.gano { color: #C8F25A; }
+.mensaje.perdio { color: #FF8A8A; }
+
+/* ===== Estilos de este juego ===== */
+.cara {
+  font-size: 2.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);  /* JavaScript lo ajusta al tamaño */
+  gap: 3px;
+  padding: 10px;
+  background: #18283F;
+  border-radius: 14px;
+  user-select: none;                        /* no seleccionar texto al hacer clic */
+}
+
+.casilla {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: #3A5274;                      /* casilla cerrada */
+  color: #F6F4EE;
+  cursor: pointer;
+}
+
+.casilla:hover { background: #4A6588; }
+
+.casilla.abierta { background: #E4E0D6; cursor: default; }
+.casilla.mina { background: #FF7A7A; }
+
+/* Un color distinto para cada número */
+.n1 { color: #1E5BD8; }
+.n2 { color: #2E7D32; }
+.n3 { color: #C62828; }
+.n4 { color: #4527A0; }
+.n5 { color: #8B4513; }
+.n6 { color: #00838F; }
+.n7 { color: #000000; }
+.n8 { color: #616161; }

@@ -1,0 +1,85 @@
+/* ===== Estilos base del Code Camp (PERSONALIZA los colores) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 16px 48px;
+  background: #0F1B2D;
+  color: #F6F4EE;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header { text-align: center; max-width: 760px; }
+h1 { margin: 8px 0; font-size: 2.2rem; color: #C8F25A; }
+h2 { margin-top: 0; font-size: 1.2rem; color: #C9D3E0; }
+.instrucciones { margin: 0 0 20px; color: #C9D3E0; font-size: 1.05rem; line-height: 1.5; }
+
+button {
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  background: #C8F25A;
+  color: #0F1B2D;
+  cursor: pointer;
+}
+button:hover { background: #DDF98E; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ===== Estilos de este proyecto ===== */
+.tablero { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+
+.panel {
+  background: #18283F;
+  border-radius: 20px;
+  padding: 24px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.camara {
+  width: 320px;
+  height: 240px;
+  border: 2px dashed #3A5274;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  color: #A9B6C8;
+}
+
+.camara canvas { border-radius: 14px; }
+
+.barras { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.barra { display: flex; align-items: center; gap: 10px; }
+.barra .nombre { width: 70px; font-size: 0.95rem; text-align: left; }
+.barra .fondo { flex: 1; height: 12px; background: #23354F; border-radius: 6px; overflow: hidden; }
+.barra .relleno { display: block; height: 12px; width: 0%; background: #5AD1F2; transition: width 0.15s; }
+.barra .porcentaje { width: 48px; text-align: right; font-size: 0.9rem; color: #C9D3E0; }
+
+/* La zona de acción cambia de color con una transición suave */
+.accion { transition: background-color 0.3s; }
+.accion h2, .accion .mensaje, .accion .confianza { color: inherit; }
+.emoji { font-size: 7rem; margin: 0; line-height: 1.1; }
+.mensaje { font-size: 1.6rem; font-weight: 700; margin: 0; text-align: center; }
+.confianza { margin: 0; opacity: 0.85; }
+
+.contadores { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.contador {
+  background: rgba(15, 27, 45, 0.35);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laberinto con niveles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Laberinto con niveles</h1>
+    <p class="instrucciones">Muévete con las flechas <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd>. Recoge las llaves 🔑 para abrir las puertas 🚪 y llega a la meta 🏁. <kbd>R</kbd> reinicia el nivel.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Nivel</span><span id="nivel" class="numero">1</span></div>
+    <div><span class="etiqueta">Llaves</span><span id="llaves" class="numero">0</span></div>
+    <div><span class="etiqueta">Movimientos</span><span id="movimientos" class="numero">0</span></div>
+  </div>
+
+  <canvas id="lienzo" width="600" height="440"></canvas>
+  <p id="mensaje" class="mensaje"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

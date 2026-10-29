@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- ===== Juego de cierre · Piedra, papel o tijera con IA (clase 11) =====
+     Es el juego P12 + la cámara (P14) + tu IA (P13 y P15).
+     Antes de abrir:
+       1. Copia la carpeta "mi_modelo" de la clase 7 dentro de esta carpeta.
+       2. Abre index.html con Live Server (clic derecho > Open with Live Server).
+     Todo corre en tu computadora: no se publica en internet.
+     Necesita internet solo para cargar las librerías de IA. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PERSONALIZA: el nombre de tu juego -->
+  <title>Piedra, papel o tijera con IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- PERSONALIZA: el nombre y las instrucciones -->
+    <h1>Piedra, papel o tijera con IA</h1>
+    <p class="instrucciones">Enciende la cámara y presiona <b>Jugar ronda</b>. Cuando termine la cuenta 3, 2, 1, haz tu jugada con la mano. Gana quien llegue primero a 3 puntos.</p>
+  </header>
+
+  <main class="tablero">
+    <!-- Panel de la cámara: lo que ve la IA -->
+    <section class="panel">
+      <h2>Lo que ve la IA</h2>
+      <div id="contenedor-camara" class="camara">
+        <p id="aviso-camara">La cámara está apagada</p>
+      </div>
+      <button id="boton-camara">Encender cámara</button>
+      <div id="barras" class="barras"></div>
+    </section>
+
+    <!-- Panel del juego -->
+    <section class="panel">
+      <h2>Marcador</h2>
+      <div class="marcador">
+        <div><span class="etiqueta">Tú</span><span id="puntos-jugador" class="numero">0</span></div>
+        <div><span class="etiqueta">Computadora</span><span id="puntos-computadora" class="numero">0</span></div>
+      </div>
+
+      <p id="cuenta" class="cuenta"></p>
+
+      <div class="jugadas">
+        <div><span class="etiqueta">Tu jugada</span><span id="jugada-jugador" class="emoji">❔</span></div>
+        <div><span class="etiqueta">Computadora</span><span id="jugada-computadora" class="emoji">❔</span></div>
+      </div>
+
+      <p id="resultado" class="mensaje">Enciende la cámara para empezar</p>
+      <button id="boton-jugar" disabled>Jugar ronda</button>
+      <button id="boton-nueva" class="secundario" hidden>Nueva partida</button>
+
+      <!-- Respaldo: por si la cámara falla el día de la presentación -->
+      <p class="respaldo-titulo">¿Sin cámara? Juega con botones:</p>
+      <div class="respaldo">
+        <button class="secundario" data-jugada="piedra">✊ Piedra</button>
+        <button class="secundario" data-jugada="papel">✋ Papel</button>
+        <button class="secundario" data-jugada="tijera">✌️ Tijera</button>
+      </div>
+
+      <p class="etiqueta">Últimas rondas</p>
+      <ol id="historial" class="historial"></ol>
+    </section>
+  </main>
+
+  <!-- Librerías de Teachable Machine (necesitan internet) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

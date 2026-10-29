@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto del reciclaje</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Reto del reciclaje</h1>
+    <p class="instrucciones">Haz clic en el bote correcto para cada objeto antes de que se acabe el tiempo. Acierto: +10 puntos. Error: −5 puntos.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Puntos</span><span id="puntos" class="numero">0</span></div>
+    <div><span class="etiqueta">Tiempo</span><span id="tiempo" class="numero">60</span></div>
+    <div><span class="etiqueta">Aciertos</span><span id="aciertos" class="numero">0</span></div>
+  </div>
+
+  <main class="zona-juego">
+    <div id="objeto" class="objeto">
+      <span id="objeto-emoji" class="objeto-emoji">♻️</span>
+      <span id="objeto-nombre" class="objeto-nombre">¿Listo para reciclar?</span>
+    </div>
+
+    <div class="botes">
+      <button class="bote plastico" data-tipo="plastico" disabled>🟡<br>Plástico</button>
+      <button class="bote papel" data-tipo="papel" disabled>🔵<br>Papel</button>
+      <button class="bote vidrio" data-tipo="vidrio" disabled>🟢<br>Vidrio</button>
+    </div>
+
+    <p id="mensaje" class="mensaje"></p>
+    <button id="boton-iniciar">Empezar</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscaminas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Buscaminas</h1>
+    <p class="instrucciones">Clic izquierdo para abrir una casilla. Clic derecho para poner o quitar una bandera 🚩. Cada número dice cuántas minas hay alrededor. Abre todas las casillas sin mina.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Minas</span><span id="minas" class="numero">10</span></div>
+    <div><button id="boton-cara" class="cara" aria-label="Nueva partida">🙂</button></div>
+    <div><span class="etiqueta">Tiempo</span><span id="tiempo" class="numero">0</span></div>
+  </div>
+
+  <main id="tablero" class="tablero"></main>
+  <p id="mensaje" class="mensaje"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

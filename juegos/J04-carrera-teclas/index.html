@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrera de teclas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Carrera de teclas</h1>
+    <p class="instrucciones">Escribe cada palabra lo más rápido que puedas. Cuando la escribes completa, aparece la siguiente. Tienes 60 segundos.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Tiempo</span><span id="tiempo" class="numero">60</span></div>
+    <div><span class="etiqueta">Palabras</span><span id="palabras" class="numero">0</span></div>
+    <div><span class="etiqueta">Palabras por minuto</span><span id="ppm" class="numero">0</span></div>
+  </div>
+
+  <main class="pista">
+    <p id="palabra" class="palabra">¿Listo?</p>
+    <input type="text" id="entrada" placeholder="Escribe aquí" autocomplete="off" spellcheck="false" disabled>
+    <p id="mensaje" class="mensaje"></p>
+    <button id="boton-iniciar">Empezar</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

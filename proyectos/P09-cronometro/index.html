@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- ===== P9 · Cronómetro y cuenta regresiva (clase 8) =====
+     Se construye con la IA como asistente: pídele explicaciones, no el código completo.
+     La cuenta regresiva es la misma "3, 2, 1" del juego de cierre. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronómetro y cuenta regresiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Cronómetro y cuenta regresiva</h1>
+
+  <div class="fila">
+    <!-- ===== Cronómetro ===== -->
+    <section class="tarjeta">
+      <h2>Cronómetro</h2>
+      <p id="pantalla-cronometro" class="pantalla">00:00.00</p>
+      <div class="botones">
+        <button id="boton-iniciar">Iniciar</button>
+        <button id="boton-vuelta" class="secundario" disabled>Vuelta</button>
+        <button id="boton-reiniciar" class="secundario">Reiniciar</button>
+      </div>
+      <ol id="vueltas" class="vueltas"></ol>
+    </section>
+
+    <!-- ===== Cuenta regresiva ===== -->
+    <section class="tarjeta">
+      <h2>Cuenta regresiva</h2>
+      <label class="campo">
+        Segundos:
+        <input type="number" id="segundos" value="3" min="1" max="600">
+      </label>
+      <p id="pantalla-cuenta" class="cuenta">3</p>
+      <div class="botones">
+        <button id="boton-cuenta">Empezar cuenta</button>
+        <button id="boton-cancelar" class="secundario" disabled>Cancelar</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

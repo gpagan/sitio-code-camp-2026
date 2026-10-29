@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- ===== P7 · Dado y ruleta de decisiones (clase 5) =====
+     Números al azar, listas y animaciones con CSS.
+     La "ruleta" es la misma idea que usará la computadora para elegir
+     piedra, papel o tijera en el juego de cierre. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dado y ruleta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Dado y ruleta de decisiones</h1>
+
+  <div class="fila">
+    <!-- ===== El dado ===== -->
+    <section class="tarjeta">
+      <h2>Dado</h2>
+      <!-- Las 9 casillas de la cara del dado; JavaScript enciende los puntos -->
+      <div id="dado" class="dado">
+        <span class="punto"></span><span class="punto"></span><span class="punto"></span>
+        <span class="punto"></span><span class="punto"></span><span class="punto"></span>
+        <span class="punto"></span><span class="punto"></span><span class="punto"></span>
+      </div>
+      <p id="valor-dado" class="grande">Lanza el dado</p>
+      <button id="boton-dado">🎲 Lanzar</button>
+      <p id="historial-dado" class="historial"></p>
+    </section>
+
+    <!-- ===== La ruleta ===== -->
+    <section class="tarjeta">
+      <h2>Ruleta de decisiones</h2>
+      <label for="opciones">Escribe una opción por línea:</label>
+      <textarea id="opciones" rows="5">Pizza
+Baleadas
+Pupusas
+Tacos
+Hamburguesa</textarea>
+      <p id="eleccion" class="ruleta">¿Qué será?</p>
+      <button id="boton-ruleta">🎡 Girar</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

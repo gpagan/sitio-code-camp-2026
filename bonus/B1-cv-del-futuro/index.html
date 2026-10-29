@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- ===== Bonus · Mi CV del futuro =====
+     Una página con la persona que quieres ser. Repasa todo el curso:
+     HTML (estructura), CSS (diseño), JavaScript (listas, objetos, funciones,
+     eventos, fechas y crear elementos).
+     PERSONALIZA: todos tus datos están en script.js, en la parte de arriba. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi CV del futuro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de herramientas: no se imprime -->
+  <nav class="herramientas">
+    <button id="boton-color" class="boton">🎨 Cambiar color</button>
+    <button id="boton-imprimir" class="boton principal">📄 Guardar en PDF o imprimir</button>
+    <button id="boton-whatsapp" class="boton whatsapp">💬 Compartir por WhatsApp</button>
+  </nav>
+
+  <!-- Ayuda para compartir: tampoco se imprime -->
+  <section class="ayuda" id="ayuda" hidden>
+    <button class="cerrar" id="cerrar-ayuda" aria-label="Cerrar">✕</button>
+    <p id="ayuda-texto"></p>
+    <ol id="ayuda-pasos"></ol>
+  </section>
+
+  <main class="cv">
+
+    <!-- ===== Encabezado ===== -->
+    <header class="encabezado">
+      <div class="avatar" id="avatar" aria-hidden="true"></div>
+      <div>
+        <p class="etiqueta">CV del futuro · <span id="anio-futuro"></span></p>
+        <h1 id="nombre"></h1>
+        <p class="titulo" id="titulo"></p>
+        <p class="lema" id="lema"></p>
+      </div>
+    </header>
+
+    <!-- Datos rápidos que calcula JavaScript -->
+    <section class="datos-rapidos">
+      <div><span class="numero" id="dato-anios"></span><span class="texto">años para llegar</span></div>
+      <div><span class="numero" id="dato-edad"></span><span class="texto">años tendré</span></div>
+      <div><span class="numero" id="dato-hitos"></span><span class="texto">metas en el camino</span></div>
+    </section>
+
+    <div class="columnas">
+      <div class="columna-principal">
+
+        <section class="bloque">
+          <h2>Sobre mí en el futuro</h2>
+          <p id="sobre-mi"></p>
+        </section>
+
+        <section class="bloque">
+          <h2>Mi camino</h2>
+          <!-- JavaScript crea un elemento por cada meta -->
+          <ol class="linea-tiempo" id="linea-tiempo"></ol>
+        </section>
+
+        <section class="bloque bloque-logros">
+          <h2>Lo que quiero lograr</h2>
+          <div class="logros" id="logros"></div>
+        </section>
+
+      </div>
+
+      <aside class="columna-lateral">
+
+        <section class="bloque">
+          <h2>Estudios</h2>
+          <ul class="estudios" id="estudios"></ul>
+        </section>
+
+        <section class="bloque">
+          <h2>Habilidades</h2>
+          <div id="habilidades"></div>
+        </section>
+
+        <section class="bloque">
+          <h2>Idiomas</h2>
+          <ul class="simple" id="idiomas"></ul>
+        </section>
+
+        <section class="bloque">
+          <h2>Mis valores</h2>
+          <div class="pastillas" id="valores"></div>
+        </section>
+
+      </aside>
+    </div>
+
+    <!-- ===== Carta ===== -->
+    <section class="bloque carta">
+      <h2>Carta a mi yo del futuro</h2>
+      <p id="carta"></p>
+      <p class="firma" id="firma"></p>
+    </section>
+
+    <footer class="pie">
+      <p>Hecho en el Code Camp Vacacional 2026 · <span id="fecha-hoy"></span></p>
+      <p class="aviso">Este es un CV de sueños y metas, no un CV real: todo lo que dice es lo que quiero lograr.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

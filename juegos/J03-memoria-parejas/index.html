@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoria de parejas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Memoria de parejas</h1>
+    <p class="instrucciones">Haz clic en dos cartas. Si son iguales, se quedan descubiertas. Encuentra todas las parejas con la menor cantidad de intentos.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Intentos</span><span id="intentos" class="numero">0</span></div>
+    <div><span class="etiqueta">Parejas</span><span id="parejas" class="numero">0 / 8</span></div>
+    <div><span class="etiqueta">Tiempo</span><span id="tiempo" class="numero">0 s</span></div>
+  </div>
+
+  <main id="tablero" class="tablero"></main>
+
+  <p id="mensaje" class="mensaje"></p>
+  <button id="boton-reiniciar">Nueva partida</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

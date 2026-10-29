@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- ===== P6 · Conversor de lempiras a dólares (clase 4) =====
+     Leer lo que escribe el usuario, hacer operaciones y validar los datos. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de lempiras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Conversor de monedas</h1>
+
+    <!-- Elegir hacia dónde convertir -->
+    <div class="direccion">
+      <label><input type="radio" name="direccion" value="hnl-usd" checked> Lempiras → Dólares</label>
+      <label><input type="radio" name="direccion" value="usd-hnl"> Dólares → Lempiras</label>
+    </div>
+
+    <label class="campo" for="cantidad">
+      <span id="etiqueta-cantidad">Cantidad en lempiras (L)</span>
+      <input type="number" id="cantidad" placeholder="Por ejemplo 500" min="0" step="0.01">
+    </label>
+
+    <!-- Atajos -->
+    <div class="atajos">
+      <button class="atajo" data-valor="100">100</button>
+      <button class="atajo" data-valor="500">500</button>
+      <button class="atajo" data-valor="1000">1,000</button>
+    </div>
+
+    <label class="campo" for="tipo-cambio">
+      <span>Tipo de cambio: lempiras por 1 dólar</span>
+      <input type="number" id="tipo-cambio" min="0" step="0.0001">
+    </label>
+
+    <button id="boton-convertir" class="principal">Convertir</button>
+
+    <p id="resultado" class="resultado"></p>
+    <p id="error" class="error"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

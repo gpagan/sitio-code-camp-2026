@@ -1,0 +1,97 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #0F1B2D;
+  color: #0F1B2D;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+}
+
+.tarjeta {
+  width: 520px;
+  max-width: 100%;
+  background-color: #F6F4EE;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+h1 { margin-top: 0; }
+
+/* Texto solo para lectores de pantalla */
+.oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.formulario { display: flex; gap: 8px; }
+
+input[type="text"] {
+  flex: 1;
+  font: inherit;
+  font-size: 18px;
+  padding: 10px 12px;
+  border: 2px solid #C9D3E0;
+  border-radius: 12px;
+}
+
+input[type="text"]:focus { outline: 3px solid #C8F25A; }
+
+button {
+  font: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  background-color: #C8F25A;
+  color: #0F1B2D;
+  cursor: pointer;
+}
+
+button:hover { background-color: #B5E040; }
+button.secundario { background-color: #E4E0D6; }
+button.secundario:hover { background-color: #D6D1C4; }
+
+.filtros { display: flex; gap: 6px; margin: 16px 0 8px; }
+.filtro { background-color: transparent; border: 2px solid #E4E0D6; padding: 6px 12px; }
+.filtro.activo { background-color: #0F1B2D; color: #F6F4EE; border-color: #0F1B2D; }
+
+.lista { list-style: none; padding: 0; margin: 0; }
+
+.tarea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid #E4E0D6;
+}
+
+.tarea input[type="checkbox"] { width: 22px; height: 22px; accent-color: #3F6B0A; }
+.tarea .texto { flex: 1; font-size: 18px; word-break: break-word; }
+.tarea.hecha .texto { text-decoration: line-through; color: #8A93A1; }
+
+.borrar {
+  background-color: transparent;
+  color: #C0392B;
+  padding: 4px 10px;
+  font-size: 18px;
+}
+
+.borrar:hover { background-color: #FBEBEB; }
+
+.vacia { color: #8A93A1; text-align: center; padding: 20px 0; }
+
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  color: #3E4A5C;
+}

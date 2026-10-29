@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  background-color: #0F1B2D;
+  color: #F6F4EE;
+}
+
+.juego {
+  background-color: #18283F;
+  border-radius: 20px;
+  padding: 32px 40px;
+  max-width: 520px;
+  text-align: center;
+}
+
+h1 {
+  color: #C8F25A;
+  margin-top: 0;
+}
+
+.entrada {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+input {
+  font: inherit;
+  font-size: 22px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px solid #3A5274;
+  text-align: center;
+}
+
+button {
+  font: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  background-color: #C8F25A;
+  color: #0F1B2D;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pista {
+  font-size: 22px;
+  font-weight: 700;
+  min-height: 30px;
+}
+
+.pista.gano { color: #C8F25A; }
+.pista.perdio { color: #FF8A8A; }
+
+.temperatura {
+  min-height: 24px;
+  color: #FFB27A;
+}

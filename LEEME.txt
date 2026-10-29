@@ -1,0 +1,85 @@
+CODE CAMP VACACIONAL 2026 · CÓDIGO DE TODOS LOS PROYECTOS
+==========================================================
+
+Todo el código fue probado en Google Chrome el 26 de octubre de 2026.
+Alcance: los proyectos se ejecutan en la computadora del estudiante.
+No se publican en internet.
+
+
+CÓMO ABRIR UN PROYECTO
+----------------------
+1. Instala Visual Studio Code y su extensión "Live Server".
+2. En Visual Studio Code, abre la carpeta del proyecto (Archivo > Abrir carpeta).
+3. Clic derecho en index.html > "Open with Live Server".
+   Se abre en Chrome desde tu propia computadora (dirección 127.0.0.1).
+
+Los proyectos P1 a P13 y los juegos también abren con doble clic en index.html.
+P14, P15 y el juego de cierre necesitan Live Server para usar la cámara y leer el modelo.
+
+Lo que cada estudiante puede cambiar está marcado en el código con la palabra PERSONALIZA.
+
+
+CARPETAS
+--------
+proyectos/   Los 15 proyectos guiados
+  P01-sobre-mi                 Clase 1 · Básico · HTML
+  P02-ficha-videojuego         Clase 2 · Básico · CSS y modelo de caja
+  P03-galeria                  Clase 3 · Básico · Flexbox y grid
+  P04-saludo-inteligente       Clase 4 · Básico · Variables y decisiones
+  P05-botones-interactivos     Clase 5 · Básico · Funciones y eventos
+  P06-conversor-lempiras       Clase 4 · Básico · Leer y validar datos
+  P07-dado-y-ruleta            Clase 5 · Básico · Azar y animaciones
+  P08-adivina-el-numero        Clase 6 · Intermedio · Primer juego completo
+  P09-cronometro               Clase 8 · Intermedio · Tiempo y cuenta regresiva
+  P10-quiz                     Reto semana 3 · Intermedio · Listas y puntaje
+  P11-lista-tareas             Reto semana 3 · Intermedio · Crear elementos y guardar datos
+  P12-ppt-botones              Clase 10 · Intermedio · La lógica del juego de cierre
+  P13-mi-primera-ia            Clase 7 · Intermedio · Guía para entrenar el modelo
+  P14-camara                   Clase 9 · Avanzado · La cámara desde JavaScript
+  P15-control-gestos           Clase 9 · Avanzado · Lo que ve la IA se vuelve acción
+
+cierre/
+  piedra-papel-tijera-ia       Clase 11 · El juego final del curso
+
+bonus/
+  B1-cv-del-futuro             Clase bonus · Mi CV del futuro (se guarda en PDF y se comparte por WhatsApp)
+
+juegos/      La biblioteca de 18 juegos de práctica
+  J01-reto-reciclaje           Básico · Mouse
+  J02-profesor-matematicas     Básico · Teclado
+  J03-memoria-parejas          Básico · Mouse
+  J04-carrera-teclas           Básico · Teclado
+  J05-golpea-al-topo           Básico · Mouse
+  J06-ahorcado                 Básico · Teclado o mouse
+  J07-tenis-retro              Intermedio · Flechas o mouse
+  J08-rompe-ladrillos          Intermedio · Flechas o mouse
+  J09-serpiente                Intermedio · Flechas
+  J10-dinosaurio-corredor      Intermedio · Barra espaciadora
+  J11-pajaro-saltarin          Intermedio · Barra espaciadora o clic
+  J12-simon-dice               Intermedio · Mouse
+  J13-bloques-que-caen         Avanzado · Flechas y barra espaciadora
+  J14-invasores-espacio        Avanzado · Flechas y barra espaciadora
+  J15-laberinto                Avanzado · Flechas
+  J16-asteroides               Avanzado · Flechas y barra espaciadora
+  J17-plataformas              Avanzado · Flechas y barra espaciadora
+  J18-buscaminas               Avanzado · Mouse
+
+
+EL MODELO DE IA (P13, P15 Y JUEGO DE CIERRE)
+--------------------------------------------
+1. En Teachable Machine, crea un proyecto de imagen con 4 clases escritas así:
+   Piedra, Papel, Tijera y Nada.
+2. Entrena el modelo y descárgalo: Export Model > Tensorflow.js > Download.
+3. Descomprime el archivo. Copia la carpeta con model.json, metadata.json y
+   weights.bin dentro de P15-control-gestos y de cierre/piedra-papel-tijera-ia,
+   con el nombre "mi_modelo". (Ya hay una carpeta mi_modelo vacía con instrucciones.)
+4. El modelo se queda en la computadora: no se sube ni se publica.
+5. P15 y el juego de cierre necesitan internet para cargar las librerías de IA
+   (TensorFlow.js y Teachable Machine, desde cdn.jsdelivr.net).
+6. Si la cámara o internet fallan, el juego de cierre tiene botones de respaldo.
+
+
+NOMBRES DE LOS JUEGOS
+---------------------
+Tetris, Pong, Breakout, Flappy Bird, Asteroids, Space Invaders y Atari son
+marcas de sus dueños. Que cada estudiante le ponga un nombre propio a su versión.

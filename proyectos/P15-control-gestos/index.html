@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- ===== P15 · Control por gestos (clase 9) =====
+     Antes de abrir:
+       1. Copia la carpeta "mi_modelo" que descargaste en la clase 7 dentro de esta carpeta.
+       2. Abre index.html con Live Server (clic derecho > Open with Live Server).
+     Necesita internet para cargar las librerías de IA. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control por gestos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Control por gestos</h1>
+    <p class="instrucciones">Enciende la cámara y haz un gesto. Tu IA lo reconoce y la página cambia de color.</p>
+  </header>
+
+  <main class="tablero">
+    <!-- Lo que ve la IA -->
+    <section class="panel">
+      <h2>Lo que ve la IA</h2>
+      <div id="contenedor-camara" class="camara">
+        <p id="aviso">La cámara está apagada</p>
+      </div>
+      <button id="boton-camara">Encender cámara</button>
+      <div id="barras" class="barras"></div>
+    </section>
+
+    <!-- La acción: cambia según el gesto -->
+    <section id="zona-accion" class="panel accion">
+      <h2>La acción</h2>
+      <p id="emoji" class="emoji">🤖</p>
+      <p id="mensaje" class="mensaje">Esperando tu gesto...</p>
+      <p id="confianza" class="confianza"></p>
+      <div id="contadores" class="contadores"></div>
+    </section>
+  </main>
+
+  <!-- Librerías de Teachable Machine (necesitan internet) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

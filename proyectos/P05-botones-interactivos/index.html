@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botones interactivos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Botones interactivos</h1>
+
+  <div class="fila">
+    <!-- 1. Contador -->
+    <section class="tarjeta">
+      <h2>Contador</h2>
+      <p class="grande"><span id="contador">0</span> me gusta</p>
+      <button id="boton-me-gusta">👍 Me gusta</button>
+      <p id="mensaje-contador" class="mensaje"></p>
+    </section>
+
+    <!-- 2. Color al azar -->
+    <section class="tarjeta">
+      <h2>Color al azar</h2>
+      <p id="codigo-color" class="grande">#F6F4EE</p>
+      <button id="boton-color">🎨 Cambiar color</button>
+    </section>
+
+    <!-- 3. Mensaje sorpresa -->
+    <section class="tarjeta">
+      <h2>Mensaje sorpresa</h2>
+      <p id="mensaje-sorpresa" class="grande">¿?</p>
+      <button id="boton-sorpresa">🎁 Sorpréndeme</button>
+    </section>
+  </div>
+
+  <!-- 4. Repeticiones: estrellas dibujadas con un ciclo for -->
+  <section class="tarjeta ancha">
+    <h2>Estrellas con un ciclo</h2>
+    <p id="estrellas" class="estrellas"></p>
+  </section>
+
+  <!-- 5. Un cuadro que se mueve con las flechas del teclado -->
+  <section class="tarjeta ancha">
+    <h2>Muévelo con las flechas del teclado</h2>
+    <div id="zona" class="zona">
+      <div id="cuadro" class="cuadro"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

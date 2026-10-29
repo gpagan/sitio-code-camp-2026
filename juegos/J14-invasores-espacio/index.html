@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invasores del espacio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Invasores del espacio</h1>
+    <p class="instrucciones">Mueve tu nave con <kbd>←</kbd> <kbd>→</kbd> y dispara con la <kbd>barra espaciadora</kbd>. Destruye a todos los invasores antes de que lleguen abajo.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Puntos</span><span id="puntos" class="numero">0</span></div>
+    <div><span class="etiqueta">Vidas</span><span id="vidas" class="numero">3</span></div>
+    <div><span class="etiqueta">Oleada</span><span id="oleada" class="numero">1</span></div>
+  </div>
+
+  <canvas id="lienzo" width="800" height="600"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

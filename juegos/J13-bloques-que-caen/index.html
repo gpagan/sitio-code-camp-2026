@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloques que caen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bloques que caen</h1>
+    <p class="instrucciones">
+      <kbd>←</kbd> <kbd>→</kbd> mover · <kbd>↑</kbd> girar · <kbd>↓</kbd> bajar más rápido · <kbd>Espacio</kbd> soltar de golpe.
+      Completa líneas para sumar puntos. Presiona <kbd>Enter</kbd> o haz clic en el tablero para empezar.
+    </p>
+  </header>
+
+  <main class="zona-juego">
+    <canvas id="lienzo" width="300" height="600"></canvas>
+
+    <aside class="lateral">
+      <div class="caja">
+        <span class="etiqueta">Siguiente</span>
+        <canvas id="siguiente" width="120" height="120"></canvas>
+      </div>
+      <div class="caja"><span class="etiqueta">Puntos</span><span id="puntos" class="numero">0</span></div>
+      <div class="caja"><span class="etiqueta">Líneas</span><span id="lineas" class="numero">0</span></div>
+      <div class="caja"><span class="etiqueta">Nivel</span><span id="nivel" class="numero">1</span></div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

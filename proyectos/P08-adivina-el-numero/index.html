@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivina el número</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="juego">
+    <h1>Adivina el número</h1>
+    <p>Pensé un número del <b>1 al 100</b>. Tienes <b>10 intentos</b> para adivinarlo.</p>
+
+    <div class="entrada">
+      <label for="campo-intento">Tu número:</label>
+      <input type="number" id="campo-intento" min="1" max="100" autofocus>
+      <button id="boton-enviar">Probar</button>
+    </div>
+
+    <p id="pista" class="pista"></p>
+    <p id="temperatura" class="temperatura"></p>
+    <p>Intentos anteriores: <span id="intentos-previos">ninguno</span></p>
+    <p>Te quedan <b id="intentos-restantes">10</b> intentos · Récord: <b id="record">sin récord</b></p>
+
+    <button id="boton-reiniciar" hidden>Jugar otra vez</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

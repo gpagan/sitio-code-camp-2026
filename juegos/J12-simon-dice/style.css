@@ -1,0 +1,85 @@
+/* ===== Estilos base del Code Camp (PERSONALIZA los colores) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 16px 48px;
+  background: #0F1B2D;
+  color: #F6F4EE;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header { text-align: center; max-width: 760px; }
+h1 { margin: 8px 0; font-size: 2.2rem; color: #C8F25A; }
+.instrucciones { margin: 0 0 20px; color: #C9D3E0; font-size: 1.05rem; line-height: 1.5; }
+
+button {
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  background: #C8F25A;
+  color: #0F1B2D;
+  cursor: pointer;
+}
+button:disabled { cursor: default; }
+
+.marcador { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px; }
+.marcador div { background: #18283F; border-radius: 12px; padding: 10px 18px; text-align: center; min-width: 120px; }
+.etiqueta { display: block; font-size: 0.8rem; color: #A9B6C8; text-transform: uppercase; letter-spacing: 1px; }
+.numero { display: block; font-size: 2rem; font-weight: 700; }
+.mensaje { min-height: 1.6em; font-size: 1.2rem; font-weight: 700; text-align: center; }
+
+/* ===== Estilos de este juego ===== */
+.tablero {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 160px);
+  gap: 14px;
+  padding: 14px;
+  background: #18283F;
+  border-radius: 50%;
+}
+
+.color {
+  width: 160px;
+  height: 160px;
+  padding: 0;
+  opacity: 0.45;                 /* apagado */
+  transition: opacity 0.1s, transform 0.1s;
+}
+
+/* Cada botón es un cuarto de círculo */
+.verde    { background: #3FD16B; border-radius: 160px 12px 12px 12px; }
+.rojo     { background: #FF5A5A; border-radius: 12px 160px 12px 12px; }
+.amarillo { background: #F6D743; border-radius: 12px 12px 12px 160px; }
+.azul     { background: #4C8DFF; border-radius: 12px 12px 160px 12px; }
+
+.color:hover:enabled { opacity: 0.65; }
+
+/* Encendido: cuando Simón lo muestra o el jugador lo presiona */
+.color.encendido { opacity: 1; transform: scale(1.04); box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); }
+
+.centro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 110px;
+  height: 110px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #0F1B2D;
+  border: 6px solid #18283F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #C8F25A;
+}

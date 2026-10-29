@@ -1,0 +1,7 @@
+Pon aquí los 3 archivos del modelo que descargaste de Teachable Machine (clase 7):
+
+  model.json
+  metadata.json
+  weights.bin
+
+El modelo se queda en tu computadora. No se publica en internet.

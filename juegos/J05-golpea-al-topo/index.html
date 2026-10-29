@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golpea al topo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Golpea al topo</h1>
+    <p class="instrucciones">Haz clic en el topo antes de que se esconda. ¡Cuidado con la bomba! Tienes 30 segundos y cada vez salen más rápido.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Puntos</span><span id="puntos" class="numero">0</span></div>
+    <div><span class="etiqueta">Tiempo</span><span id="tiempo" class="numero">30</span></div>
+    <div><span class="etiqueta">Récord</span><span id="record" class="numero">0</span></div>
+  </div>
+
+  <!-- JavaScript crea los 9 hoyos aquí -->
+  <main id="campo" class="campo"></main>
+
+  <p id="mensaje" class="mensaje"></p>
+  <button id="boton-iniciar">Empezar</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

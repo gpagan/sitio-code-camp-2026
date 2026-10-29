@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenis retro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tenis retro</h1>
+    <p class="instrucciones">Mueve tu paleta (la verde) con las flechas <kbd>↑</kbd> <kbd>↓</kbd> o con el mouse. Gana quien llegue primero a 5 puntos.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Tú</span><span id="puntos-jugador" class="numero">0</span></div>
+    <div><span class="etiqueta">Computadora</span><span id="puntos-computadora" class="numero">0</span></div>
+  </div>
+
+  <!-- El lienzo (canvas) es donde se dibuja el juego -->
+  <canvas id="lienzo" width="800" height="500"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

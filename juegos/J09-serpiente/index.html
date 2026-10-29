@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serpiente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Serpiente</h1>
+    <p class="instrucciones">Guía la serpiente con las flechas <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd>. Cada fruta la hace crecer y un poco más rápida. No choques con la pared ni con tu cola.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Frutas</span><span id="puntos" class="numero">0</span></div>
+    <div><span class="etiqueta">Récord</span><span id="record" class="numero">0</span></div>
+  </div>
+
+  <canvas id="lienzo" width="600" height="600"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

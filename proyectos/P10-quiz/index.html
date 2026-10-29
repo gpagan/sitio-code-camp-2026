@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- ===== P10 · Quiz de mi tema favorito (reto de la semana 3) =====
+     PERSONALIZA: cambia las preguntas en script.js por las de tu tema favorito. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="quiz">
+    <p id="tema" class="tema"></p>
+
+    <!-- Barra de progreso -->
+    <div class="progreso"><div id="barra" class="barra"></div></div>
+    <p id="numero-pregunta" class="numero-pregunta"></p>
+
+    <h1 id="pregunta" class="pregunta"></h1>
+    <div id="opciones" class="opciones"></div>
+
+    <p id="mensaje" class="mensaje"></p>
+    <button id="boton-siguiente" hidden>Siguiente</button>
+
+    <!-- Pantalla final -->
+    <section id="final" class="final" hidden>
+      <p class="puntaje-final"><span id="puntaje">0</span> de <span id="total">0</span></p>
+      <p id="comentario" class="comentario"></p>
+      <button id="boton-reiniciar">Jugar otra vez</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

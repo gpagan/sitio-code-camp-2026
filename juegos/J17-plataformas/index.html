@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataformas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Plataformas</h1>
+    <p class="instrucciones">Camina con <kbd>←</kbd> <kbd>→</kbd> y salta con la <kbd>barra espaciadora</kbd> o <kbd>↑</kbd>. Recoge las monedas, evita los picos y llega a la bandera.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Monedas</span><span id="monedas" class="numero">0</span></div>
+    <div><span class="etiqueta">Vidas</span><span id="vidas" class="numero">3</span></div>
+  </div>
+
+  <canvas id="lienzo" width="800" height="450"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5AD1F2"/>
+      <stop offset="1" stop-color="#B9EDFA"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#cielo)"/>
+  <circle cx="320" cy="70" r="34" fill="#F6D743"/>
+  <rect x="0" y="210" width="400" height="90" fill="#7BDE6A"/>
+  <rect x="0" y="210" width="400" height="16" fill="#4FB548"/>
+  <rect x="60" y="150" width="60" height="60" fill="#B8784A"/>
+  <rect x="60" y="150" width="60" height="12" fill="#7BDE6A"/>
+  <rect x="140" y="120" width="60" height="90" fill="#B8784A"/>
+  <rect x="140" y="120" width="60" height="12" fill="#7BDE6A"/>
+  <rect x="250" y="160" width="26" height="50" fill="#8B5E3C"/>
+  <circle cx="263" cy="140" r="36" fill="#3FA34D"/>
+  <rect x="92" y="96" width="22" height="34" fill="#0F1B2D"/>
+  <rect x="88" y="80" width="30" height="22" fill="#FFCC99"/>
+  <rect x="88" y="76" width="30" height="8" fill="#5A3A22"/>
+</svg>

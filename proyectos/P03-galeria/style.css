@@ -1,0 +1,102 @@
+/* ===== P3 · Galería de fotos =====
+   FLEXBOX acomoda cosas en UNA dirección (una fila o una columna).
+   GRID acomoda cosas en DOS direcciones (filas y columnas a la vez). */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px;
+  background-color: #F6F4EE;
+  color: #0F1B2D;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+}
+
+/* ---------- FLEXBOX ---------- */
+.encabezado {
+  display: flex;
+  justify-content: space-between;  /* uno a cada lado */
+  align-items: center;             /* centrados en vertical */
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto 24px;
+}
+
+h1 { margin: 0; font-size: 32px; }
+
+.contador {
+  margin: 0;
+  background-color: #0F1B2D;
+  color: #C8F25A;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+
+/* ---------- GRID ---------- */
+.galeria {
+  display: grid;
+  /* PERSONALIZA: 3 columnas iguales. Prueba con repeat(2, 1fr) o repeat(4, 1fr) */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;                       /* espacio entre fotos */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Algunas fotos ocupan más espacio */
+.foto.grande { grid-row: span 2; }      /* dos filas de alto */
+.foto.ancha  { grid-column: span 2; }   /* dos columnas de ancho */
+
+/* ---------- Cada foto ---------- */
+.foto {
+  position: relative;              /* para poner el texto encima de la imagen */
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(15, 27, 45, 0.15);
+  min-height: 180px;
+}
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;               /* llena el espacio sin deformarse */
+  transition: transform 0.4s;      /* el cambio dura 0.4 segundos */
+}
+
+.foto figcaption {
+  position: absolute;              /* encima de la imagen, abajo */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  background: linear-gradient(transparent, rgba(15, 27, 45, 0.85));
+  color: #F6F4EE;
+  font-weight: 700;
+  transform: translateY(100%);     /* escondido abajo */
+  transition: transform 0.3s;
+}
+
+/* ---------- Efectos con :hover ---------- */
+.foto:hover img {
+  transform: scale(1.1);           /* la imagen crece un 10 % */
+}
+
+.foto:hover figcaption {
+  transform: translateY(0);        /* el texto sube */
+}
+
+footer {
+  text-align: center;
+  color: #3E4A5C;
+  margin-top: 24px;
+}
+
+/* En pantallas pequeñas, solo 1 columna */
+@media (max-width: 600px) {
+  .galeria { grid-template-columns: 1fr; }
+  .foto.ancha { grid-column: span 1; }
+  .foto.grande { grid-row: span 1; }
+}

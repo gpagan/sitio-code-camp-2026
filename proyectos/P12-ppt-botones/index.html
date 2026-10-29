@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- ===== P12 · Piedra, papel o tijera con botones (clase 10) =====
+     Toda la lógica del juego de cierre, todavía sin cámara.
+     En la clase 11 se agrega la cámara y la IA a este mismo juego. -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PERSONALIZA: el nombre de tu juego -->
+  <title>Piedra, papel o tijera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Piedra, papel o tijera</h1>
+    <p class="instrucciones">Elige tu jugada. Después de la cuenta 3, 2, 1, la computadora muestra la suya. Gana quien llegue primero a 3 puntos.</p>
+  </header>
+
+  <main class="panel">
+    <div class="marcador">
+      <div><span class="etiqueta">Tú</span><span id="puntos-jugador" class="numero">0</span></div>
+      <div><span class="etiqueta">Computadora</span><span id="puntos-computadora" class="numero">0</span></div>
+    </div>
+
+    <p id="cuenta" class="cuenta"></p>
+
+    <div class="jugadas">
+      <div><span class="etiqueta">Tu jugada</span><span id="jugada-jugador" class="emoji">❔</span></div>
+      <div><span class="etiqueta">Computadora</span><span id="jugada-computadora" class="emoji">❔</span></div>
+    </div>
+
+    <p id="resultado" class="mensaje">¡Elige tu jugada!</p>
+
+    <div class="opciones">
+      <button class="jugada" data-jugada="piedra">✊<br>Piedra</button>
+      <button class="jugada" data-jugada="papel">✋<br>Papel</button>
+      <button class="jugada" data-jugada="tijera">✌️<br>Tijera</button>
+    </div>
+
+    <button id="boton-nueva" class="secundario" hidden>Nueva partida</button>
+
+    <p class="etiqueta">Últimas rondas</p>
+    <ol id="historial" class="historial"></ol>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

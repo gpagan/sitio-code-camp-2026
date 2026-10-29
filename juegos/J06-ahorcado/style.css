@@ -1,0 +1,82 @@
+/* ===== Estilos base del Code Camp (PERSONALIZA los colores) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 16px 48px;
+  background: #0F1B2D;
+  color: #F6F4EE;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header { text-align: center; max-width: 760px; }
+h1 { margin: 8px 0; font-size: 2.2rem; color: #C8F25A; }
+.instrucciones { margin: 0 0 20px; color: #C9D3E0; font-size: 1.05rem; line-height: 1.5; }
+
+button {
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  background: #C8F25A;
+  color: #0F1B2D;
+  cursor: pointer;
+}
+button:hover { background: #DDF98E; }
+button:disabled { cursor: default; }
+
+.mensaje { min-height: 1.6em; font-size: 1.2rem; font-weight: 700; }
+.mensaje.gano { color: #C8F25A; }
+.mensaje.perdio { color: #FF8A8A; }
+
+/* ===== Estilos de este juego ===== */
+.juego {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #18283F;
+  border-radius: 20px;
+  padding: 24px 32px;
+  margin-bottom: 20px;
+}
+
+.dibujo { width: 200px; height: 220px; }
+.dibujo line, .dibujo circle { stroke-width: 6; stroke-linecap: round; fill: none; }
+.dibujo .base { stroke: #8B5E3C; }
+.dibujo .parte { stroke: #F6F4EE; visibility: hidden; }
+.dibujo .parte.visible { visibility: visible; }
+
+.lado { min-width: 280px; text-align: center; }
+.pista { color: #A9B6C8; margin: 0; }
+
+.palabra {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin: 12px 0;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(9, 52px);
+  gap: 6px;
+  justify-content: center;
+}
+
+.tecla { padding: 10px 0; font-size: 1.1rem; background: #23354F; color: #F6F4EE; }
+.tecla:hover { background: #2E4566; }
+.tecla.acierto { background: #3F6B0A; color: #F6F4EE; opacity: 0.8; }
+.tecla.fallo { background: #5D1F1F; color: #F6F4EE; opacity: 0.6; }
+
+@media (max-width: 560px) {
+  .teclado { grid-template-columns: repeat(7, 44px); }
+}

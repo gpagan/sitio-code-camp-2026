@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simón dice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Simón dice</h1>
+    <p class="instrucciones">Mira y escucha la secuencia de colores. Después repítela haciendo clic en el mismo orden. Cada ronda agrega un color más.</p>
+  </header>
+
+  <div class="marcador">
+    <div><span class="etiqueta">Ronda</span><span id="ronda" class="numero">0</span></div>
+    <div><span class="etiqueta">Récord</span><span id="record" class="numero">0</span></div>
+  </div>
+
+  <main class="tablero">
+    <button class="color verde" data-color="0" aria-label="Verde"></button>
+    <button class="color rojo" data-color="1" aria-label="Rojo"></button>
+    <button class="color amarillo" data-color="2" aria-label="Amarillo"></button>
+    <button class="color azul" data-color="3" aria-label="Azul"></button>
+    <div id="centro" class="centro">Simón</div>
+  </main>
+
+  <p id="mensaje" class="mensaje">Presiona Empezar</p>
+  <button id="boton-iniciar">Empezar</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
