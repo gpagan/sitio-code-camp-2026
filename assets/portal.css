@@ -97,20 +97,19 @@ h3 { font-size: 19px; }
 }
 .whatsapp-flotante:hover { transform: scale(1.06); }
 
-/* ---------- Banner de registro ---------- */
-.banner-registro {
-  background: var(--lima);
-  color: var(--noche);
+/* ---------- Registro destacado en la portada ---------- */
+.registro-destacado {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 10px 16px;
-  text-align: center;
-  font-size: 15px;
+  gap: 14px;
+  background: rgba(200, 242, 90, 0.12);
+  border: 1px solid rgba(200, 242, 90, 0.4);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin: 18px 0;
 }
-.banner-registro p { margin: 0; }
+.registro-destacado p { margin: 0; color: #fff; }
 
 /* ---------- Registro final ---------- */
 .registro-final { background: var(--noche); color: #fff; }
@@ -310,7 +309,7 @@ h3 { font-size: 19px; }
   .seccion, .seccion.contenedor { padding: 52px 0; }
   .marca { font-size: 15px; }
   .nav-cta { padding: 7px 12px; font-size: 13px; }
-  .banner-registro { font-size: 13px; padding: 8px 12px; }
+  .registro-destacado { font-size: 13px; padding: 10px 14px; }
   .portada { padding: 40px 0 64px; }
   .portada-collage { display: none; }
   .misiones, .aprendizajes, .precios { grid-template-columns: 1fr; }
